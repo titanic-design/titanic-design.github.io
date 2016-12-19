@@ -10,12 +10,28 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <style>
+    header {
+      min-height: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(titanic.jpg);
+      background-position: center;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      padding-top: 10%;
+    }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-light bg-faded">
       <a class="navbar-brand" href="/">Titanic Design</a>
     </nav>
+    <header></header>
 
+    <div class="wrapper">
+       <img src="titanic.jpg" class="img-responsive" alt="RMS Titanic">
+    </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
