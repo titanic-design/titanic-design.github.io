@@ -13,6 +13,11 @@
     <style>
       html,body {
         height: 100%;
+        font-family: 'Broadway', 'Limelight',serif;
+      }
+      h1 {
+        font-family: 'Broadway', 'Limelight',serif;
+        color: #C49752;
       }
       header {
         min-height: 100%;
@@ -22,15 +27,22 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        padding-top: 10%;
+      }
+      header div {
+        margin: 10%;
+        border: 2px solid #C49752;
+        outline: 2px solid #C49752;
+        outline-offset: -12px;
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-faded">
-      <a class="navbar-brand" href="/">Titanic Design</a>
-    </nav>
-    <header></header>
+    <header>
+      <div>
+        <h1>Titanic Design</h1>
+        <p>Products Larger Then Life</p>
+      </div>
+    </header>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
