@@ -11,39 +11,36 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <style>
-      html,body {
-        height: 100%;
-        font-family: 'Broadway', 'Limelight',serif;
-      }
-      h1 {
-        font-family: 'Broadway', 'Limelight',serif;
-        color: #C49752;
+      @import url(http://fonts.googleapis.com/css?family=Didact+Gothic|Limelight);
+      * { box-sizing:border-box; }
+      html { height:100%; }
+
+      body {
+        height:100%;
+        background-color:#164B45;
+        color:#B9A46B;
+        font-family: 'Century Gothic', 'Didact Gothic', sans-serif;
+        padding:1em;
       }
       header {
-        min-height: 100%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(titanic.jpg);
-        background-position: center;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        border:2px solid #72634C;
+        outline: 2px solid #72634C;
+        outline-offset:-12px;
+        height:100%;
       }
-      header .header-content {
-        position: relative;
-        width: 100%;
-        padding: 100px 15px;
-        border: 2px solid #C49752;
-        outline: 2px solid #C49752;
-        outline-offset: -12px;
+      h1 {
+        font-family:'Broadway', 'Limelight',serif;
+        font-size:2.2em;
+        text-align:center;
+        margin-top:2em;
+        margin-bottom:1em;
       }
     </style>
   </head>
   <body>
     <header>
-      <div class="header-content">
-        <h1>Titanic Design</h1>
-        <p>Products Larger Then Life</p>
-      </div>
+      <h1>Titanic Design</h1>
+      <p>Products Larger Then Life</p>
     </header>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
