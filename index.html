@@ -233,10 +233,8 @@
         </div>
       </div>
     </div>
-    <div class="jumbotron text-center">
-      <div class="container">
-        <video controls="controls" width="800" height="600" name="Video Name" src="IMG_2725.MOV">Upgrade your fucking browser.</video>
-      </div>
+    <div class="jumbotron text-center" style="padding:0;">
+      <video autoplay loop muted width="100%" name="Video Name" src="IMG_2741.MOV" id="gears">Upgrade your fucking browser.</video>
     </div>
     <div class="card-columns" style="background-color: #fff; padding-top:40px">
       <div class="card card-inverse">
@@ -267,6 +265,14 @@
         <a href="mailto:titanic@thomasrprice.com" class="btn btn-secondary">contact</a>
       </div>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var vid = document.getElementById("gears");
+      vid.playbackRate = 0.4;
+    });
+
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
