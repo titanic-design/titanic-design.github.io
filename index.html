@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="theme-color" content="#3D98C7">
     <link rel="icon" href="favicon.ico?dickbutt" type="image/x-icon">
 
     <title>Titanic Design</title>
@@ -114,13 +115,25 @@
           }
         }
 
+        .logo-container {
+          height: 100vh;
+        }
         @media (max-width: 767px) {
-          .fullscreen-bg {
-            background: url('../img/videoframe.jpg') center center / cover no-repeat;
-          }
-
           .fullscreen-bg__video {
-            display: none;
+            position: relative;
+            width: 100%;
+            left: 0px;
+          }
+          .logo-container {
+            height: 100%;
+            background-color: #3D98C7;
+          }
+          .logo {
+            -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+             -moz-animation: fadein 1s; /* Firefox < 16 */
+              -ms-animation: fadein 1s; /* Internet Explorer */
+               -o-animation: fadein 1s; /* Opera < 12.1 */
+                  animation: fadein 1s;
           }
         }
         .contact {
@@ -137,18 +150,17 @@
           display: flex;
           padding-left: 18px;
         }
+
     </style>
   </head>
 
-  <body>
+  <body style="background-color: #3D98C7">
     <a href="mailto:titanic@thomasrprice.com" class="btn contact td-flex align-items-center">&#9993;</a>
     <div>
       <div class="fullscreen-bg">
-        <video autoplay muted name="Video Name" src="IMG_2784.MOV" class="fullscreen-bg__video">
-          <h1>🖕Upgrade your fucking browser🖕</h1>
-        </video>
+        <video autoplay muted name="Video Name" src="IMG_2784.MOV" class="fullscreen-bg__video"></video>
       </div>
-      <div class="d-flex align-items-center" style="height: 100vh;">
+      <div class="d-flex align-items-center logo-container" style="">
         <img class="logo" src="logo.png" alt="Titanic Design" style="margin: auto;">
       </div>
     </div>
@@ -158,10 +170,10 @@
         <hr/>
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col-sm">
               <img class="card-img" src="MG_9903.jpg" alt="Card image" style="width:100%">
             </div>
-            <div class="col-8 d-flex align-items-center">
+            <div class="col-sm-8 d-flex align-items-center">
               <div>
                 <h4>TITANIC SIZE</h4>
                 Professional or high-end consumer we offer the capability to produce high quality, accurate, titanic single piece parts up to 1 meter x 1 meter x 450 mm that cannot be made easily with other equipment. Accelerate your product development and innovation with huge single piece functional components from our unrivaled build volume.
@@ -169,21 +181,21 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-8 d-flex align-items-center">
+            <div class="col-sm-8 d-flex align-items-center">
               <div>
                 <h4>TECHNICAL KNOWLEDGE</h4>
                 Design and order with confidence with our knowledgeable staff capable of quickly providing mechanical engineering assistance throughout the process with CAD and DFM guidance to ensure your prototypes or parts are processed quickly and flawlessly. Satisfaction guaranteed.
               </div>
             </div>
-            <div class="col">
+            <div class="col-sm">
               <img class="card-img" src="MG_9921.jpg" alt="Card image" style="width:100%">
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col-sm">
               <img class="card-img" src="MG_9917.jpg" alt="Card image" style="width:100%">
             </div>
-            <div class="col-8 d-flex align-items-center">
+            <div class="col-sm-8 d-flex align-items-center">
               <div>
                 <h4>SMALL PRODUCTION RUNS</h4>
                 Get to market faster with early products or prototypes with limited batch production runs. Fast service and quick processing. Expedited processing available.
@@ -198,10 +210,10 @@
         <h2>3D Printing Service</h2>
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col-sm">
               <img class="card-img" src="MG_9909.jpg" alt="Card image" style="width:100%">
             </div>
-            <div class="col-8 d-flex align-items-center">
+            <div class="col-sm-8 d-flex align-items-center">
               <div>
                 <h4>TITANIC SIZE</h4>
                 Professional or high-end consumer we offer the capability to produce high quality, accurate, titanic single piece parts up to 1 meter x 1 meter x 450 mm that cannot be made easily with other equipment. Accelerate your product development and innovation with huge single piece functional components from our unrivaled build volume.
@@ -209,21 +221,21 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-8 d-flex align-items-center">
+            <div class="col-sm-8 d-flex align-items-center">
               <div>
                 <h4>TECHNICAL KNOWLEDGE</h4>
                 Design and order with confidence with our knowledgeable staff capable of quickly providing mechanical engineering assistance throughout the process with CAD and DFM guidance to ensure your prototypes or parts are processed quickly and flawlessly. Satisfaction guaranteed.
               </div>
             </div>
-            <div class="col">
+            <div class="col-sm">
               <img class="card-img" src="MG_9911.jpg" alt="Card image" style="width:100%">
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col-sm">
               <img class="card-img" src="bolterplain.jpg" alt="Card image" style="width:100%">
             </div>
-            <div class="col-8 d-flex align-items-center">
+            <div class="col-sm-8 d-flex align-items-center">
               <div>
                 <h4>SMALL PRODUCTION RUNS</h4>
                 Get to market faster with early products or prototypes with limited batch production runs. Fast service and quick processing. Expedited processing available.
@@ -234,7 +246,7 @@
       </div>
     </div>
     <div class="jumbotron text-center" style="padding:0;">
-      <video autoplay loop muted width="100%" name="Video Name" src="IMG_2741.MOV" id="gears">Upgrade your fucking browser.</video>
+      <video autoplay loop muted width="100%" name="Video Name" src="IMG_2741.MOV" id="gears"></video>
     </div>
     <div class="card-columns" style="background-color: #fff; padding-top:40px">
       <div class="card card-inverse">
