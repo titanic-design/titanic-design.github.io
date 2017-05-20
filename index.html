@@ -162,9 +162,15 @@
   <body style="background-color: #3D98C7">
     <div class="fixed-action-btn">
       <a class="btn-floating btn-large blue tooltipped" data-position="left" data-tooltip="mailto:" data-delay="0" href="mailto:titanic@thomasrprice.com">
-        <i class="large material-icons">&#xE0E1;</i>
+        <i class="material-icons">mail_outline</i>
       </a>
       <ul>
+        <li>
+          <a class="btn-floating tooltipped white" id="copyEmail" data-position="left"
+             data-tooltip="copy: titanic@thomasrprice.com" data-clipboard-text="titanic@thomasrprice.com" data-delay="0" target="_blank">
+             <i class="material-icons" style="color: #555">content_copy</i>
+          </a>
+        </li>
         <li>
           <a class="btn-floating tooltipped" data-position="left" data-tooltip="Yahoo!" data-delay="0" target="_blank" style="background-color: #720e9e; color: #fff"
              href="http://compose.mail.yahoo.com/?to=titanic@thomasrprice.com&subj=3d%20Printing&body=Hi+Tom%2C%0D%0A%0D%0AI+would+like+to+enquire+about+your+3d+printing+services.">
@@ -282,17 +288,26 @@
     </div>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-      var vid = document.getElementById("gears");
-      vid.playbackRate = 0.4;
-    });
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var vid = document.getElementById("gears");
+        vid.playbackRate = 0.4;
 
+        new Clipboard('#copyEmail');
+        var copy = document.getElementById('copyEmail');
+        copy.onclick = async function(e) {
+          Materialize.toast('Copied titanic@thomasrprice.com!', 2000, 'rounded')
+        };
+      });
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
 
   </body>
 </html>
