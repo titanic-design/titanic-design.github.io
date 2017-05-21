@@ -130,6 +130,10 @@
         .mailto {
           border-color: #FBB31B;
         }
+        .mailto:hover, .mailto:focus {
+          border-color: #FBB31B;
+          box-shadow: 0 0px 2px 0 rgba(251, 179, 27,0.84), 0 0px 5px 0 rgba(251, 179, 27,0.82), 0 0px 1px -2px rgba(251, 179, 27,0.9);
+        }
         .mailto .material-icons {
           color: #FBB31B;
           width: 24px;
@@ -138,11 +142,20 @@
         .gmail {
           border-color: #fff;
         }
-        .yahoo, .yahoo:hover {
+        .gmail:hover, .gmail:focus {
+          box-shadow: 0 0px 2px 0 rgba(255, 255, 255,0.84), 0 0px 5px 0 rgba(255, 255, 255,0.82), 0 0px 1px -2px rgba(255, 255, 255,0.9);
+        }
+        .yahoo {
           border-color: #9243bc;
+        }
+        .yahoo:hover, .yahoo:focus {
+          box-shadow: 0 0px 2px 0 rgba(146, 67, 188,0.84), 0 0px 5px 0 rgba(146, 67, 188,0.82), 0 0px 1px -2px rgba(146, 67, 188,0.9);
         }
         .copy-email {
           border-color: #59C8E2;
+        }
+        .copy-email:hover, .copy-email:focus {
+          box-shadow: 0 0px 2px 0 rgba(89, 200, 226,0.84), 0 0px 5px 0 rgba(89, 200, 226,0.82), 0 0px 1px -2px rgba(89, 200, 226,0.9);
         }
         .copy-email .material-icons {
           color: #59C8E2;
