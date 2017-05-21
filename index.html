@@ -6,163 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="theme-color" content="#3D98C7">
+    <meta name="theme-color" content="#363f45">
     <meta http-equiv="Cache-control" content="public">
-    <link rel="icon" href="favicon.ico?dickbutt" type="image/x-icon">
+    <link rel="icon" href="media/favicon.ico?dickbutt" type="image/x-icon">
 
     <title>Titanic Design</title>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-
-      header.jumbotron {
-        /*background-color:#3D98C7;*/
-        color:#FFF;
-        padding:1em;
-        text-align:center;
-      }
-      header.jumbotron .container {
-        border:2px solid #FFF;
-        outline: 2px solid #FFF;
-        outline-offset:-12px;
-        height:100%;
-      }
-      .logo {
-        width: 80%;
-        -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
-         -moz-animation: fadein 10s; /* Firefox < 16 */
-          -ms-animation: fadein 10s; /* Internet Explorer */
-           -o-animation: fadein 10s; /* Opera < 12.1 */
-              animation: fadein 10s;
-        /*-webkit-animation-delay: 13s; /* Safari 4.0 - 8.0
-        animation-delay: 13s;*/
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-      }
-      .card-columns img {
-        width: 100%;
-      }
-      .card {
-        border: none;
-      }
-      .jumbotron {
-        margin: 0;
-        border-radius: 0;
-      }
-      .row {
-        margin-top: 60px;
-        margin-bottom: 60px;
-      }
-      /* fade in animation */
-      @keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Firefox < 16 */
-      @-moz-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Safari, Chrome and Opera > 12.1 */
-      @-webkit-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Internet Explorer */
-      @-ms-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-      /* Opera < 12.1 */
-      @-o-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-            /* full screen images*/
-      .fullscreen-bg {
-          position: fixed;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          overflow: hidden;
-          z-index: -100;
-        }
-
-        .fullscreen-bg__video {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-
-        @media (min-aspect-ratio: 16/9) {
-          .fullscreen-bg__video {
-            height: 300%;
-            top: -100%;
-          }
-        }
-
-        @media (max-aspect-ratio: 16/9) {
-          .fullscreen-bg__video {
-            width: 300%;
-            left: -100%;
-          }
-        }
-
-        .logo-container {
-          height: 100vh;
-        }
-        @media (max-width: 767px) {
-          .fullscreen-bg__video {
-            position: relative;
-            width: 100%;
-            left: 0px;
-          }
-          .logo-container {
-            height: 100%;
-            background-color: #3D98C7;
-          }
-          .logo {
-            -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-             -moz-animation: fadein 1s; /* Firefox < 16 */
-              -ms-animation: fadein 1s; /* Internet Explorer */
-               -o-animation: fadein 1s; /* Opera < 12.1 */
-                  animation: fadein 1s;
-          }
-        }
-        .contact {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          font-size: 60px;
-          box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-          background-color: #fff;
-          border-radius: 50%;
-          width: 80px;
-          height: 80px;
-          text-align: center;
-          display: flex;
-          padding-left: 16.5px;
-          z-index:9999999999999999999999999999;
-        }
-        .fixed-action-btn a:hover {
-          text-decoration: none;
-        }
-    </style>
   </head>
 
-  <body style="background-color: #3D98C7">
+  <body>
     <div class="fixed-action-btn">
-      <a class="btn-floating btn-large blue tooltipped" data-position="left" data-tooltip="mailto:" data-delay="0" href="mailto:titanic@thomasrprice.com">
+      <a class="mailto btn-floating btn-large tooltipped" data-position="left" data-tooltip="mailto:" data-delay="0" href="mailto:titanic@thomasrprice.com">
         <i class="material-icons">mail_outline</i>
       </a>
       <ul>
@@ -181,19 +42,17 @@
         <li>
           <a class="btn-floating white tooltipped" data-position="left" data-tooltip="Gmail" data-delay="0" target="_blank"
              href="https://mail.google.com/mail/?view=cm&fs=1&to=titanic@thomasrprice.com&su=3d%20Printing&body=Hi+Tom%2C%0D%0A%0D%0AI+would+like+to+enquire+about+your+3d+printing+services.">
-            <img src="gmail.png" width="16px" height="16px">
+            <img src="media/gmail.png" width="16px" height="16px">
           </a>
         </li>
       </ul>
     </div>
-
-    <!-- <a href="mailto:titanic@thomasrprice.com" class="btn contact td-flex align-items-center"><span class="ion-ios-email-outline"></span></a> -->
     <div>
       <div class="fullscreen-bg">
-        <video autoplay muted name="Video Name" src="IMG_2784.mp4" class="fullscreen-bg__video"></video>
+        <video autoplay muted name="Video Name" src="media/IMG_2784.mp4" class="fullscreen-bg__video"></video>
       </div>
-      <div class="d-flex align-items-center logo-container" style="">
-        <img class="logo" src="logo.png" alt="Titanic Design" style="margin: auto;">
+      <div class="d-flex align-items-center logo-container">
+        <img class="logo" src="media/logo.png" alt="Titanic Design" style="margin: auto;">
       </div>
     </div>
     <div class="jumbotron text-left">
@@ -202,7 +61,7 @@
         <hr/>
         <div class="row">
           <div class="col-sm">
-            <img class="card-img" src="MG_9903.jpg" alt="Card image" style="width:100%">
+            <img src="media/MG_9903.jpg" alt="Card image" style="width:100%">
           </div>
           <div class="col-sm-8 d-flex align-items-center">
             <div>
@@ -219,12 +78,12 @@
             </div>
           </div>
           <div class="col-sm">
-            <img class="card-img" src="MG_9921.jpg" alt="Card image" style="width:100%">
+            <img src="media/MG_9921.jpg" alt="Card image" style="width:100%">
           </div>
         </div>
         <div class="row">
           <div class="col-sm">
-            <img class="card-img" src="MG_9917.jpg" alt="Card image" style="width:100%">
+            <img src="media/MG_9917.jpg" alt="Card image" style="width:100%">
           </div>
           <div class="col-sm-8 d-flex align-items-center">
             <div>
@@ -236,7 +95,7 @@
       </div>
     </div>
     <div class="jumbotron text-center" style="padding:0;">
-      <video autoplay loop muted width="100%" name="Video Name" src="IMG_2741.mp4" id="gears"></video>
+      <video autoplay loop muted width="100%" name="Video Name" src="media/IMG_2741.mp4" id="gears"></video>
     </div>
     <div class="jumbotron text-left" style="background-color:#fff">
       <div class="container">
@@ -244,7 +103,7 @@
         <div class="">
           <div class="row">
             <div class="col-sm">
-              <img class="card-img" src="MG_9909.jpg" alt="Card image" style="width:100%">
+              <img src="media/MG_9909.jpg" alt="Card image" style="width:100%">
             </div>
             <div class="col-sm-8 d-flex align-items-center">
               <div>
@@ -262,12 +121,12 @@
               </div>
             </div>
             <div class="col-sm">
-              <img class="card-img" src="MG_9911.jpg" alt="Card image" style="width:100%">
+              <img src="media/MG_9911.jpg" alt="Card image" style="width:100%">
             </div>
           </div>
           <div class="row">
             <div class="col-sm">
-              <img class="card-img" src="bolterplain.jpg" alt="Card image" style="width:100%">
+              <img src="media/bolterplain.jpg" alt="Card image" style="width:100%">
             </div>
             <div class="col-sm-8 d-flex align-items-center">
               <div>
@@ -277,12 +136,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="jumbotron text-center">
-      <div class="container">
-        Contact at:
-        <a href="mailto:titanic@thomasrprice.com">titanic@thomasrprice.com</a>
       </div>
     </div>
 
