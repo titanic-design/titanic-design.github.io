@@ -125,15 +125,32 @@
         }
         .btn-floating {
           background-color: #363f45;
+          border: 2px #fff solid;
         }
         .mailto {
-          border: 2px #FBB31B solid;
+          border-color: #FBB31B;
         }
-        .btn-floating:hover, .btn-floating:focus {
-          background-color: #222;
-        }
-        .btn-floating .material-icons{
+        .mailto .material-icons {
           color: #FBB31B;
           width: 24px;
           line-height: 55px !important;
+        }
+        .gmail {
+          border-color: #fff;
+        }
+        .yahoo, .yahoo:hover {
+          border-color: #720e9e;
+          color: #fff;
+        }
+        .copy-email {
+          border-color: #59C8E2;
+        }
+        .copy-email .material-icons {
+          color: #59C8E2;
+          width: 24px;
+          line-height: 38px !important;
+          font-size: 20px;
+        }
+        .btn-floating:hover, .btn-floating:focus {
+          background-color: #222;
         }
