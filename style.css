@@ -1,4 +1,3 @@
-
       body {
         font-family: 'Khula', sans-serif;
         background-color: #363f45;
@@ -117,10 +116,10 @@
           color: #59C8E2;
         }
         .jumbotron {
-          background: #363f45;
-          background: -moz-linear-gradient(top, #363f45 0%, #2c3038 80%);
+          background: #2c3038;
+          /*background: -moz-linear-gradient(top, #363f45 0%, #2c3038 80%);
           background: -webkit-linear-gradient(top, #363f45 0%, #2c3038 80%);
-          background: linear-gradient(to bottom, #363f45 0%, #2c3038 80%);
+          background: linear-gradient(to bottom, #363f45 0%, #2c3038 80%);*/
           color: #fff;
         }
         .btn-floating {
@@ -182,4 +181,77 @@
           bottom: 0;
           left: 0;
           background-image: linear-gradient(90deg, transparent, #111);
+        }
+
+        @keyframes roll {
+          0% {
+            transform: rotateX(345deg) rotateY(0);
+          }
+          100% {
+            transform: rotateX(345deg) rotateY(360deg);
+          }
+        }
+
+        .dimensions {
+          position: relative;
+          margin: 5px auto;
+          width: 300px;
+          height: 135px;
+          perspective: 500px;
+        }
+
+        .cube {
+          width: inherit;
+          height: inherit;
+          transform-style: preserve-3d;
+          transform: rotateX(345deg) rotateY(240deg) rotateZ(0deg);
+          -webkit-animation-name: roll;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-duration: 20s;
+          -webkit-transform-style: preserve-3d;
+        }
+
+        .side {
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          border: 1px solid #59C8E2;
+          font: normal 70px Arial;
+          text-align: center;
+          line-height: 100px;
+          color: #fff;
+                -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 2s ease-in-out;
+            -ms-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out;
+        }
+
+        .front {
+          transform: translateZ(150px);
+        }
+
+        .back {
+          transform: rotateY(180deg) translateZ(150px);
+        }
+
+        .right {
+          transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .left {
+          transform: rotateY(-90deg) translateZ(150px);
+        }
+
+        .top {
+          transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .bottom {
+          transform: rotateX(-90deg) translateZ(-15px);
+        }
+
+        .top, .bottom {
+          height:300px;
         }
