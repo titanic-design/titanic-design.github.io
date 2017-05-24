@@ -177,11 +177,11 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background-color: rgba(44,48,56,0.7);
+          background-color: rgba(0,0,0,0.7);
         }
 
         .honey-bg {
-          background: url('light_honeycomb_@2x.png') repeat;
+          background: url('light_honeycombX.png') repeat;
           position: relative;
         }
         .honey-bg:before {
@@ -191,7 +191,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background-color: rgba(0,0,0,0.7);
+          background-color: rgba(34,38,46,0.7);
         }
 
         @keyframes roll {
