@@ -3,7 +3,7 @@
  */
 .site-header {
   min-height: $spacing-unit * 1.865;
-
+  background-color: #fff;
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -105,6 +105,7 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
+  background-color: #fff;
   padding: $spacing-unit 0;
 
   .social-media-list {
@@ -129,9 +130,6 @@
 /**
  * Page content
  */
-.page-content {
-  padding: $spacing-unit 0;
-}
 
 .page-heading {
   @include relative-font-size(2);
