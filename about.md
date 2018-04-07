@@ -2,8 +2,7 @@
 layout: about
 title: About
 permalink: /about/
----
+tagline: Printing A Better Future
+opener: Titanic Design specializes in providing titanic scale 3D printing services for clients around the world. Our goal is to provide the tools to transform concepts into physical artifacts. Opening new possibilities across sectors that have traditionally been unable to access high quality additive manufacturing.
 
-We can produce high quality and accurate single piece parts up to 1 meter x 1 meter x 450 mm.
-Accelerate your product development and innovation with huge single piece functional components from
-our unrivaled build volume.
+---

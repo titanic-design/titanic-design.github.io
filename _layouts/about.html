@@ -2,6 +2,23 @@
 layout: default
 ---
 
-<div class="wrapper">
-  {{ content }}
+<div class="about">
+  <div class="hero">
+    <div class="wrapper">
+      <img src="/assets/img/logo.png" alt="Titanic Design" class="logo"/>
+      <h1 class="tagline">{{ page.tagline }}</h1>
+      <a mailto="{{ site.email }}" class="button">Contact</a>
+    </div>
+  </div>
+  <div class="opener-section">
+    <div class="wrapper">
+      <div class="opener">
+        {{ page.opener }}
+      </div>
+    </div>
+  </div>
+  <div class="team">
+    <div class="wrapper">
+    </div>
+  </div>
 </div>
