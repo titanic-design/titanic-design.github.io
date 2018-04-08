@@ -14,10 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Titanic Design
-email: titanic@thomasrprice.com
+email: tom@titanic.design
 baseurl: ""
 url: "http://titanic.design"
-
+repository: titanic-design/titanic-design.github.io
+github: [metadata]
 # Build settings
 markdown: kramdown
 plugins:
