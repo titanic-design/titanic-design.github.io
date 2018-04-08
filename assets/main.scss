@@ -8,6 +8,10 @@
   background-color: $brand-color;
   padding: 40px 0;
 
+  .wrapper {
+    text-align: center;
+  }
+
   .logo {
     max-width: 350px;
   }
@@ -46,9 +50,45 @@
       font-size: 20px;
     }
   }
+
+  .team-section {
+    padding: 40px 0;
+    background-color: #f6f9fc;
+
+    .wrapper {
+      max-width: 900px;
+    }
+
+    .team {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+
+      .name {
+        margin: 0;
+      }
+
+      .member {
+        text-align: center;
+      }
+
+      .image {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
 }
 
 .blog {
+  text-align: center;
+
   .post-list {
     padding: 40px 0;
   }

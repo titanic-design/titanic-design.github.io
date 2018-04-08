@@ -17,8 +17,20 @@ layout: default
       </div>
     </div>
   </div>
-  <div class="team">
+  <div class="team-section">
     <div class="wrapper">
+      <h2 style="text-align:center">Team</h2>
+      <ul class="team">
+        {% for person in page.team -%}
+          <li class="member">
+            <figure class="image">
+              <img src="/assets/img/team/{{person.image}}" alt="{{ person.name }}"/>
+            </figure>
+            <h3 class="name">{{ person.name }}</h3>
+            <p>{{ person.title }}</p>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
