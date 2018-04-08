@@ -16,5 +16,4 @@ section2:
 section3:
     title: Service
     content: One part or one thousand, design and order with confidence. Our knowledgeable and friendly staff offer technical analysis and printing feasibility on every part to make sure the parts you wanted are the parts you actually get. Mechanical engineers and CAD designers with Solidworks on staff to ensure we can provide solutions to meet your needs. From fit checks and show pieces to functional prototypes and production parts across industries we solve problems others can't.
-
 ---
