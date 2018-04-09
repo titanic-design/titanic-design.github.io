@@ -113,7 +113,7 @@ layout: default
         var name = document.getElementById("name").value;
         var description = document.getElementById("description").value;
         OneSignal.setEmail(email);
-        OneSignal.setEmail('contact' + email + '@titanic.design').then(function() {
+        OneSignal.setEmail('contact+' + email + '@titanic.design').then(function() {
           OneSignal.sendTags({full_name: name, description: description}).then(function() {
              OneSignal.getUserId(sendNotification);
           });
