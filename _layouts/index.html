@@ -76,8 +76,9 @@ layout: default
         var name = document.getElementById("name").value;
         var description = document.getElementById("description").value;
         OneSignal.setEmail('contact' + email + '@titanic.design');
-        OneSignal.setEmail(email);
-        OneSignal.sendTags({name: name, description: description});
+        OneSignal.setEmail(email).then(function() {
+          OneSignal.sendTags({name: name, description: description});
+        });
       });
       return false;
     }
