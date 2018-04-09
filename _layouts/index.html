@@ -7,7 +7,7 @@ layout: default
     <div class="wrapper">
       <img src="/assets/img/logo.png" alt="Titanic Design" class="logo"/>
       <h1 class="tagline">{{ page.tagline }}</h1>
-      <a href="/#contact" class="button">Contact</a>
+      <a href="mailto:{{ site.email }}" class="button">Contact</a>
     </div>
   </div>
   <div class="products">
@@ -51,7 +51,7 @@ layout: default
 
   <div class="section3">
     <div class="wrapper">
-      <form onsubmit="return saveContact()">
+      <!-- <form onsubmit="return saveContact()">
         <h4 id="contact">Contact</h4>
         <div>
           <label>Email</label>
@@ -66,24 +66,48 @@ layout: default
           <textarea id="description" rows="11" cols="50" required></textarea>
         </div>
         <input type="submit" class="button" value="Contact" />
-      </form>
+      </form> -->
     </div>
   </div>
+  {% raw %}
   <script type="text/javascript">
-    function sendEmail(id) {
+    function sendEmail(player_id) {
       var data = {
         app_id: "bf177da8-b857-43cc-a8db-4c6038836ac4",
-        "include_player_ids": [id],
-        "email_subject": "New contact from https://titanic.design!",
-        "email_body": "<html><body><p>{{ full_name }}</p><p>{{ description }}</p></body></html>"
+        include_player_ids: [player_id],
+        // include_email_tokens: ["contact@titanic.design"],
+        email_subject: "New contact from https://titanic.design!",
+        email_body: "<html><body><p>{{ full_name }}</p><p>{{ description }}</p></body></html>"
       };
       fetch("https://onesignal.com/api/v1/notifications", {
         body: JSON.stringify(data),
         headers: {
           "Content-Type": "application/json; charset=utf-8",
+          "Autorization": "Basic OWRjOWNhNTYtY2Y2Ni00MDhkLTg3YTUtMzA2YTlmZDc0ZmMw"
         },
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
       }).then(r => console.log(r)); // parses response to JSON
+    }
+
+    function updateTags(player_id) {
+      var name = document.getElementById("name").value;
+      var description = document.getElementById("description").value;
+      var data = {
+        app_id: "bf177da8-b857-43cc-a8db-4c6038836ac4",
+        tags: {
+          full_name: name,
+          description: description
+        }
+      };
+      fetch("https://onesignal.com/api/v1/players/" + player_id, {
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json; charset=utf-8",},
+        method: 'PUT',
+      }).then(function (r) {
+        return r.json();
+      }).then(function(json) {
+        sendEmail(player_id);
+      });
     }
 
     function createMailTo(name, description) {
@@ -100,21 +124,18 @@ layout: default
       }).then(function (r) {
         return r.json();
       }).then(function(json) {
-        OneSignal.sendTags({full_name: name, description: description}).then(function() {
-          sendEmail(json.id);
-        });
+        updateTags(json.id);
       });
     }
 
     function saveContact() {
       OneSignal.push(function() {
         var email = document.getElementById("email").value;
-        var name = document.getElementById("name").value;
-        var description = document.getElementById("description").value;
         OneSignal.setEmail(email);
-        createMailTo(name, description);
+        createMailTo();
       });
       return false;
     }
   </script>
+  {% endraw %}
 </div>
