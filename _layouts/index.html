@@ -70,14 +70,53 @@ layout: default
     </div>
   </div>
   <script type="text/javascript">
+    function sendNotification(player_id) {
+      var data = {
+        app_id: "bf177da8-b857-43cc-a8db-4c6038836ac4",
+        "include_player_ids": [player_id],
+        "email_subject": "New contact from https://titanic.design!",
+        "email_body": "<html><body><p>{{ full_name }}</p><p>{{ description }}</p></body></html>"
+      };
+
+      var headers = {
+        "Content-Type": "application/json; charset=utf-8",
+      };
+
+      var options = {
+        host: "onesignal.com",
+        port: 443,
+        path: "/api/v1/notifications",
+        method: "POST",
+        headers: headers
+      };
+
+      var https = require('https');
+      var req = https.request(options, function(res) {
+        res.on('data', function(data) {
+          console.log("Response:");
+          console.log(JSON.parse(data));
+        });
+      });
+
+      req.on('error', function(e) {
+        console.log("ERROR:");
+        console.log(e);
+      });
+
+      req.write(JSON.stringify(data));
+      req.end();
+    };
+
     function sendEmail() {
       OneSignal.push(function() {
         var email = document.getElementById("email").value;
         var name = document.getElementById("name").value;
         var description = document.getElementById("description").value;
-        OneSignal.setEmail('contact' + email + '@titanic.design');
-        OneSignal.setEmail(email).then(function() {
-          OneSignal.sendTags({name: name, description: description});
+        OneSignal.setEmail(email);
+        OneSignal.setEmail('contact' + email + '@titanic.design').then(function() {
+          OneSignal.sendTags({full_name: name, description: description}).then(function() {
+             OneSignal.getUserId(sendNotification);
+          });
         });
       });
       return false;
