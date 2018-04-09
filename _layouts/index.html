@@ -72,10 +72,10 @@ layout: default
   <script type="text/javascript">
     function sendEmail() {
       OneSignal.push(function() {
-        var email = document.getElementById("email");
-        var name = document.getElementById("name");
-        var description = document.getElementById("description");
-        OneSignal.setEmail('{{ site.email }}');
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+        var description = document.getElementById("description").value;
+        OneSignal.setEmail('contact' + email + '@titanic.design');
         OneSignal.setEmail(email);
         OneSignal.sendTags({name: name, description: description});
       });
