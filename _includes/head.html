@@ -2,6 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.seo.title }}</title>
+  <title>{{ site.seo.description }}</title>
+
 
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/img/favicomatic/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/favicomatic/apple-touch-icon-114x114.png" />
@@ -29,4 +32,15 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+
+  <link rel="manifest" href="/assets/manifest.json" />
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "bf177da8-b857-43cc-a8db-4c6038836ac4",
+      });
+    });
+  </script>
 </head>
