@@ -16,7 +16,8 @@
   margin-bottom: 0;
   color: #fff;
   float: left;
-  text-transform: uppercase;;
+  text-transform: uppercase;
+  margin-right: 20px;
 
   &:hover,
   &:focus,
@@ -28,8 +29,11 @@
 }
 
 .site-nav {
-  float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
+
+  .contact {
+     float: right;
+  }
 
   .nav-trigger {
       display: none;
@@ -40,14 +44,15 @@
   }
 
   .page-link {
-    color: rgba(255,255,255,0.9);
+    color: #fff;
     line-height: $base-line-height;
     text-transform: uppercase;
     letter-spacing: 1px;
 
     &:hover,
     &:focus {
-      color: #fff;
+      color: rgba(255,255,255,0.7);
+
       text-decoration: none;
     }
 
